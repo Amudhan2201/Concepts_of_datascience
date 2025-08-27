@@ -66,8 +66,7 @@ class TernarySearchTree:
         self._traverse(node.middle, prefix + node.char, result)
         self._traverse(node.right, prefix, result)
 
-# Sample Test cases are inserted
-# Example usage and basic testing
+
 if __name__ == '__main__':
     tst = TernarySearchTree()
     words = ["cat", "cap", "can", "bat", "bag", "bad"]
@@ -90,7 +89,7 @@ if __name__ == '__main__':
 
     print("✅ All basic tests passed.")
 
-### TEST CASE FOR WORD TEXT FILE
+
 def load_words_from_file(filepath):
     try:
         with open(filepath, 'r') as file:
@@ -102,21 +101,21 @@ def load_words_from_file(filepath):
 if __name__ == '__main__':
     tst = TernarySearchTree()
 
-    # Path to your file (Windows style)
-    filepath = r"C:\Users\SUDHIR\Downloads\Project Concept of Data Science\search_trees\insert_words.txt"
+    
+    filepath = r"/Users/amudhans/Desktop/Concepts_of Datascience_secondchance/data/search_trees/insert_words.txt"
 
-    # Load and insert words from the file
+    
     words_from_file = load_words_from_file(filepath)
     for word in words_from_file:
         tst.insert(word)
 
     print(f"✅ Inserted {len(words_from_file)} words into the TST.")
 
-    # Optional: Traverse and print all inserted words
+   
     print("🌳 Words in TST (via traverse):")
     print(tst.traverse())
 
-    # Optional: Test search
+    
     test_words = ["cat", "banana", "tree", "dog"]
     for word in test_words:
         found = tst.search(word)
@@ -128,7 +127,7 @@ class TernarySearchTree:
         self.root = None
         self._size = 0
 
-    def search(self, word):  # <-- Move this above insert()
+    def search(self, word):  
         if not word:
             return False
         return self._search(self.root, word, 0)
@@ -149,7 +148,7 @@ class TernarySearchTree:
     def insert(self, word):
         if not word:
             return
-        if not self.search(word):  # Only count new words
+        if not self.search(word):  
             self.root = self._insert(self.root, word, 0)
             self._size += 1
 
@@ -171,4 +170,4 @@ class TernarySearchTree:
     def __len__(self):
         return self._size
 
-    # Your traverse methods can follow here
+
