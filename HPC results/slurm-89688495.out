@@ -1,0 +1,23 @@
+SLURM_JOB_ID: 58237544
+SLURM_JOB_USER: vsc30067 
+
+SLURM_JOB_ACCOUNT: lp_h_ds_students
+SLURM_JOB_NAME: tst_ternary.slurm
+SLURM_CLUSTER_NAME: genius
+SLURM_JOB_PARTITION: batch
+SLURM_NNODES: 1
+SLURM_NODELIST: r25i27n02
+SLURM_JOB_CPUS_PER_NODE: 1
+Date: Sat Jun 14 18:38:05 CEST 2025
+Walltime: 00-00:05:00
+========================================================================
+Words inserted.
+
+
+
+Total words in corncob_lowercase dataset: 58110
+Benchmarking complete.
+
+real	0m78.115s
+user	0m56.794s
+sys	0m0.415s
